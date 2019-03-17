@@ -6,24 +6,20 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   background-color: #f1f1f1;
 }
-
 #regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  font-family: Raleway;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
+    background-color: #fff;
+    margin: 20px auto;
+    font-family: Raleway;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
 }
-
 h1 {
   text-align: center;  
 }
-
 input {
   padding: 10px;
   width: 100%;
@@ -31,54 +27,46 @@ input {
   font-family: Raleway;
   border: 1px solid #aaaaaa;
 }
-
 /* Mark input boxes that gets an error on validation: */
 input.invalid {
   background-color: #ffdddd;
 }
-
 /* Hide all steps by default: */
 .tab {
   display: none;
 }
-
 button {
-  background-color: #4CAF50;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  font-family: Raleway;
-  cursor: pointer;
+    background-color: #fbbc05;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
 }
-
 button:hover {
   opacity: 0.8;
 }
-
 #prevBtn {
-  background-color: #bbbbbb;
+  background-color: #0c2e8a;
 }
-
 /* Make circles that indicate the steps of the form: */
 .step {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbbbbb;
+  background-color: #0c2e8a;
   border: none;  
   border-radius: 50%;
   display: inline-block;
   opacity: 0.5;
 }
-
 .step.active {
   opacity: 1;
 }
-
 /* Mark the steps that are finished and valid: */
 .step.finish {
-  background-color: #4CAF50;
+  background-color: #fbbc05;
 }
 </style>
 <body>
@@ -121,7 +109,6 @@ button:hover {
 <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
-
 function showTab(n) {
   // This function will display the specified tab of the form...
   var x = document.getElementsByClassName("tab");
@@ -140,7 +127,6 @@ function showTab(n) {
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
 }
-
 function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
@@ -159,7 +145,6 @@ function nextPrev(n) {
   // Otherwise, display the correct tab:
   showTab(currentTab);
 }
-
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
@@ -181,7 +166,6 @@ function validateForm() {
   }
   return valid; // return the valid status
 }
-
 function fixStepIndicator(n) {
   // This function removes the "active" class of all steps...
   var i, x = document.getElementsByClassName("step");
